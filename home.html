@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+/* TÍTULO */
+h1{
+    margin-top:60px;
+    text-align:center;
+    color:#333;
+    font-size:42px;
+}
+
+/* SUBTÍTULO */
+p{
+    text-align:center;
+    color:#555;
+    font-size:18px;
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* LISTA DE PAÍSES */
+.paises{
+    text-align:center;
+    margin-top:60px;
+}
+
+/* NOMES GRANDES */
+.pais{
+    font-size:32px;
+    margin:15px 0;
+    color:#222;
+    transition:0.3s;
+    cursor:default;
+}
+
+/* EFEITO HOVER */
+.pais:hover{
+    color:#00bcd4;
+    transform:scale(1.1);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="menu-lateral">
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+<a href="brasil.html">🇧🇷 Brasil</a>
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+<a href="japao.html">🇯🇵 Japão</a>
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+<a href="italia.html">🇮🇹 Itália</a>
+<a href="australia.html">🇦🇺 Austrália</a>
+</div>
+
+<h1>🌍 Atlas Interativo</h1>
+<p>Explore diferentes países</p>
+
+<div class="paises">
+
+<div class="pais">🇧🇷 Brasil</div>
+<div class="pais">🇩🇪 Alemanha</div>
+<div class="pais">🇯🇵 Japão</div>
+<div class="pais">🇫🇮 Finlândia</div>
+<div class="pais">🇮🇹 Itália</div>
+<div class="pais">🇦🇺 Austrália</div>
+
+</div>
+
+</body>
+</html>

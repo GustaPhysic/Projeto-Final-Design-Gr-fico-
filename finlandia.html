@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Finlândia</title>
+
+<style>
+ body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+/* TÍTULO */
+h1{
+    margin:20px;
+    text-align:center;
+    color:#333;
+}
+
+/* IMAGEM DO MAPA */
+img{
+    display:block;
+    margin:20px auto;
+    max-width:80%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* LINKS */
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* DIALOG (MODAL) */
+dialog{
+    padding:20px;
+    border:none;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+.bt-fechar{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#ff5252;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bt-fechar:hover{
+    background:#d32f2f;
+}
+
+/* TABELA */
+.info-tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.info-tabela th{
+    background:#00bcd4;
+    color:white;
+    padding:8px;
+}
+
+.info-tabela td{
+    padding:8px;
+    border:1px solid #ccc;
+    background:#f9f9f9;
+}
+
+.info-tabela tr:hover td{
+    background:#eee;
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<div class="menu-lateral">
+
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+
+<a href="brasil.html">🇧🇷 Brasil</a>
+
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+
+<a href="japao.html">🇯🇵 Japão</a>
+
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+
+<a href="italia.html">🇮🇹 Itália</a>
+
+<a href="australia.html">🇦🇺 Austrália</a>
+
+</div>
+
+
+
+
+<h1>Mapa da Finlândia</h1>
+
+<img src="mapa-da-finlandia.svg"
+alt="mapa da Finlândia"
+usemap="#mapafinlandia">
+
+
+
+
+<map name="mapafinlandia">
+
+<area shape="poly"
+coords="296,127,324,184,355,203,383,191,390,175,430,209,443,201,448,177,460,173,472,156,478,91,478,83,506,53,519,55,551,37,563,49,577,63,585,70,619,103,603,122,606,154,586,173,601,179,587,212,596,251,630,267,656,312,620,392,639,447,631,450,600,450,599,470,605,478,601,492,602,497,607,505,586,504,590,514,590,518,560,520,556,508,543,507,525,532,491,536,483,525,450,534,434,545,419,542,410,541,408,535,391,520,388,503,373,479,370,465,376,443,383,421,387,406,383,395,370,361,378,352,377,339,364,330,368,309,372,292,379,280,363,263,356,244,341,228,315,217,299,205,287,187,281,169,265,161,255,146,256,140,276,149,273,131,279,122,291,121,298,128"
+href="#"
+alt="Lappi"
+id="abrir-finlandia-lappi-Modal">
+
+
+<area shape="poly"
+coords="654,560,630,554,620,562,604,571,598,581,587,589,572,593,566,605,553,606,537,608,544,625,543,633,528,639,518,650,510,659,499,670,509,692,514,712,518,730,566,741,581,755,590,766,596,756,613,762,615,784,619,795,613,811,630,836,631,838,632,851,637,859,638,861,632,866,619,862,617,873,621,876,639,901,649,912,662,935,669,948,673,964,672,979,699,964,717,954,728,927,757,876,768,848,751,825,740,801,677,748,694,738,698,706,676,687,672,660,679,647,676,636,656,631,653,606,661,596,652,583,651,560"
+href="#"
+alt="Kainuu"
+id="abrir-finlandia-kainuu-Modal">
+
+
+<area shape="poly"
+coords="353,1109,383,1118,392,1119,395,1108,419,1103,423,1093,431,1090,440,1096,450,1091,456,1104,476,1105,485,1101,491,1099,500,1103,507,1116,506,1120,502,1135,499,1144,486,1141,471,1133,471,1137,469,1148,460,1157,453,1149,447,1157,437,1157,423,1163,419,1171,411,1172,394,1175,384,1191,379,1180,335,1192,333,1182,314,1197,308,1182,307,1172,311,1166,324,1161,338,1161,338,1150,347,1137,348,1122,351,1117,355,1110"
+href="#"
+alt="Uusimaa"
+id="abrir-finlandia-uusimaa-Modal">
+
+
+<area shape="poly"
+coords="399,937,398,934,372,921,390,932,399,959,404,979,408,994,413,1010,413,1019,413,1028,410,1040,399,1031,376,1043,367,1051,352,1060,334,1066,320,1067,303,1062,303,1049,297,1034,283,1025,287,1012,292,986,299,971,289,948,294,940,302,928,302,923,319,920,335,907,342,907,364,905"
+href="#"
+alt="Pirkanmaa"
+id="abrir-finlandia-pirkanmaa-Modal">
+
+</map>
+
+
+
+
+
+<dialog id="finlandia-lappi-Modal">
+
+<h2>Lappi</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Subártico</td></tr>
+<tr><td>População</td><td>Baixa densidade</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.324 m</td></tr>
+<tr><td>Vegetação</td><td>Tundra e coníferas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-finlandia-lappi-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="finlandia-kainuu-Modal">
+
+<h2>Kainuu</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Frio continental</td></tr>
+<tr><td>População</td><td>Baixa</td></tr>
+<tr><td>Altitude</td><td>~100 m a 300 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas boreais</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-finlandia-kainuu-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="finlandia-uusimaa-Modal">
+
+<h2>Uusimaa</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado frio</td></tr>
+<tr><td>População</td><td>Aprox. 1,7 milhão</td></tr>
+<tr><td>Altitude</td><td>~0 m a 150 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas e áreas urbanas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-finlandia-uusimaa-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="finlandia-pirkanmaa-Modal">
+
+<h2>Pirkanmaa</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Frio temperado</td></tr>
+<tr><td>População</td><td>Aprox. 500 mil</td></tr>
+<tr><td>Altitude</td><td>~100 m a 200 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas e lagos</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-finlandia-pirkanmaa-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+
+<script>
+
+const modal_finlandia_lappi =
+document.getElementById(
+'finlandia-lappi-Modal'
+);
+
+const abrir_finlandia_lappi =
+document.getElementById(
+'abrir-finlandia-lappi-Modal'
+);
+
+const fechar_finlandia_lappi =
+document.getElementById(
+'fechar-finlandia-lappi-Modal'
+);
+
+abrir_finlandia_lappi.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_finlandia_lappi.showModal();
+
+});
+
+fechar_finlandia_lappi.addEventListener(
+'click',
+function(){
+
+modal_finlandia_lappi.close();
+
+});
+
+
+
+
+
+const modal_finlandia_kainuu =
+document.getElementById(
+'finlandia-kainuu-Modal'
+);
+
+const abrir_finlandia_kainuu =
+document.getElementById(
+'abrir-finlandia-kainuu-Modal'
+);
+
+const fechar_finlandia_kainuu =
+document.getElementById(
+'fechar-finlandia-kainuu-Modal'
+);
+
+abrir_finlandia_kainuu.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_finlandia_kainuu.showModal();
+
+});
+
+fechar_finlandia_kainuu.addEventListener(
+'click',
+function(){
+
+modal_finlandia_kainuu.close();
+
+});
+
+
+
+
+
+const modal_finlandia_uusimaa =
+document.getElementById(
+'finlandia-uusimaa-Modal'
+);
+
+const abrir_finlandia_uusimaa =
+document.getElementById(
+'abrir-finlandia-uusimaa-Modal'
+);
+
+const fechar_finlandia_uusimaa =
+document.getElementById(
+'fechar-finlandia-uusimaa-Modal'
+);
+
+abrir_finlandia_uusimaa.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_finlandia_uusimaa.showModal();
+
+});
+
+fechar_finlandia_uusimaa.addEventListener(
+'click',
+function(){
+
+modal_finlandia_uusimaa.close();
+
+});
+
+
+
+
+
+const modal_finlandia_pirkanmaa =
+document.getElementById(
+'finlandia-pirkanmaa-Modal'
+);
+
+const abrir_finlandia_pirkanmaa =
+document.getElementById(
+'abrir-finlandia-pirkanmaa-Modal'
+);
+
+const fechar_finlandia_pirkanmaa =
+document.getElementById(
+'fechar-finlandia-pirkanmaa-Modal'
+);
+
+abrir_finlandia_pirkanmaa.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_finlandia_pirkanmaa.showModal();
+
+});
+
+fechar_finlandia_pirkanmaa.addEventListener(
+'click',
+function(){
+
+modal_finlandia_pirkanmaa.close();
+
+});
+
+
+modal_finlandia_lappi.addEventListener('click', function(event){
+    const rect = modal_finlandia_lappi.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_finlandia_lappi.close();
+    }
+});
+
+
+modal_finlandia_kainuu.addEventListener('click', function(event){
+    const rect = modal_finlandia_kainuu.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_finlandia_kainuu.close();
+    }
+});
+
+modal_finlandia_uusimaa.addEventListener('click', function(event){
+    const rect = modal_finlandia_uusimaa.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_finlandia_uusimaa.close();
+    }
+});
+
+modal_finlandia_pirkanmaa.addEventListener('click', function(event){
+    const rect = modal_finlandia_pirkanmaa.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_finlandia_pirkanmaa.close();
+    }
+});
+
+</script>
+
+</body>
+
+</html>

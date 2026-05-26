@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Austrália</title>
+
+<style>
+ body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+/* TÍTULO */
+h1{
+    margin:20px;
+    text-align:center;
+    color:#333;
+}
+
+/* IMAGEM DO MAPA */
+img{
+    display:block;
+    margin:20px auto;
+    max-width:80%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* LINKS */
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* DIALOG (MODAL) */
+dialog{
+    padding:20px;
+    border:none;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+.bt-fechar{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#ff5252;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bt-fechar:hover{
+    background:#d32f2f;
+}
+
+/* TABELA */
+.info-tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.info-tabela th{
+    background:#00bcd4;
+    color:white;
+    padding:8px;
+}
+
+.info-tabela td{
+    padding:8px;
+    border:1px solid #ccc;
+    background:#f9f9f9;
+}
+
+.info-tabela tr:hover td{
+    background:#eee;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="menu-lateral">
+
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+
+<a href="brasil.html">🇧🇷 Brasil</a>
+
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+
+<a href="japao.html">🇯🇵 Japão</a>
+
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+
+<a href="italia.html">🇮🇹 Itália</a>
+
+<a href="australia.html">🇦🇺 Austrália</a>
+
+</div>
+
+
+
+
+<h1>Mapa da Austrália</h1>
+
+<img src="mapa-da-australia.svg"
+alt="mapa da Austrália"
+usemap="#mapaaustralia">
+
+
+
+
+<map name="mapaaustralia">
+
+<area shape="poly"
+coords="89,367,80,369,76,348,67,364,69,374,71,387,65,406,65,418,65,423,66,435,71,452,81,470,64,481,76,495,79,515,84,531,88,538,93,555,102,588,118,626,114,661,111,674,104,677,103,688,110,695,125,704,136,712,159,717,177,714,202,694,214,685,266,680,298,680,312,678,325,651,345,648,364,633,391,631,412,630,429,620,430,174,418,174,414,177,411,169,382,147,378,156,369,156,364,164,355,168,347,171,344,170,348,180,338,181,323,192,333,198,324,212,308,213,303,217,311,227,306,236,290,240,284,220,274,233,277,253,265,265,256,276,249,285,244,293,216,304,203,305,194,305,178,313,158,325,138,321,132,321,119,326,98,343,92,351,82,368"
+href="#"
+alt="Western Australia"
+id="abrir-australia-western-Modal">
+
+
+<area shape="poly"
+coords="650,224,691,246,706,247,724,225,734,194,730,163,734,132,735,117,740,107,744,95,752,79,757,77,758,95,769,118,774,130,780,162,784,169,799,169,807,165,814,177,818,183,822,202,829,218,841,244,843,254,838,258,846,271,847,280,858,285,871,291,888,301,894,306,905,312,905,322,904,329,911,339,918,344,924,351,927,362,930,368,933,362,942,366,949,379,953,389,956,397,970,403,978,414,979,415,986,428,997,440,1000,447,1002,476,1012,504,1014,512,1011,527,1002,527,978,529,978,541,969,544,961,544,960,537,930,534,911,530,905,543,876,540,812,543,718,538,720,461,646,458,648,224"
+href="#"
+alt="Queensland"
+id="abrir-australia-queensland-Modal">
+
+
+<area shape="poly"
+coords="719,541,718,682,742,688,754,700,763,700,775,707,808,746,821,738,843,741,873,743,879,741,891,750,923,782,936,780,931,765,944,710,959,690,974,659,989,638,1002,611,1019,530,996,535,982,550,959,547,941,539,930,539,907,540,890,551,729,547,720,542"
+href="#"
+alt="New South Wales"
+id="abrir-australia-newsouthwales-Modal">
+
+
+<area shape="poly"
+coords="718,688,718,799,740,810,759,812,773,821,794,815,809,807,806,792,817,788,814,800,811,809,822,804,833,811,817,816,833,825,846,825,864,813,882,798,907,793,920,791,928,784,898,770,889,761,882,746,845,747,832,745,814,746,794,738,785,725,775,713,766,701,751,700,727,687,718,686"
+href="#"
+alt="Victoria"
+id="abrir-australia-victoria-Modal">
+
+</map>
+
+
+
+
+
+<dialog id="australia-western-Modal">
+
+<h2>Western Australia</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Desértico e semiárido (interior) e mediterrâneo (costa)</td></tr>
+<tr><td>População</td><td>Aprox. 2,7 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.245 m</td></tr>
+<tr><td>Vegetação</td><td>Desertos, savanas e vegetação rasteira</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-australia-western-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="australia-queensland-Modal">
+
+<h2>Queensland</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Tropical no norte e subtropical no sul</td></tr>
+<tr><td>População</td><td>Aprox. 5,5 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.622 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas tropicais, savanas e áreas costeiras</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-australia-queensland-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="australia-newsouthwales-Modal">
+
+<h2>New South Wales</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado</td></tr>
+<tr><td>População</td><td>Aprox. 8 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 2.228 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas, áreas agrícolas e costeiras</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-australia-newsouthwales-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="australia-victoria-Modal">
+
+<h2>Victoria</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado oceânico</td></tr>
+<tr><td>População</td><td>Aprox. 6,7 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.986 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas temperadas e áreas agrícolas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-australia-victoria-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+
+<script>
+
+const modal_australia_western =
+document.getElementById(
+'australia-western-Modal'
+);
+
+const abrir_australia_western =
+document.getElementById(
+'abrir-australia-western-Modal'
+);
+
+const fechar_australia_western =
+document.getElementById(
+'fechar-australia-western-Modal'
+);
+
+abrir_australia_western.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_australia_western.showModal();
+
+});
+
+fechar_australia_western.addEventListener(
+'click',
+function(){
+
+modal_australia_western.close();
+
+});
+
+
+
+
+
+const modal_australia_queensland =
+document.getElementById(
+'australia-queensland-Modal'
+);
+
+const abrir_australia_queensland =
+document.getElementById(
+'abrir-australia-queensland-Modal'
+);
+
+const fechar_australia_queensland =
+document.getElementById(
+'fechar-australia-queensland-Modal'
+);
+
+abrir_australia_queensland.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_australia_queensland.showModal();
+
+});
+
+fechar_australia_queensland.addEventListener(
+'click',
+function(){
+
+modal_australia_queensland.close();
+
+});
+
+
+
+
+
+const modal_australia_newsouthwales =
+document.getElementById(
+'australia-newsouthwales-Modal'
+);
+
+const abrir_australia_newsouthwales =
+document.getElementById(
+'abrir-australia-newsouthwales-Modal'
+);
+
+const fechar_australia_newsouthwales =
+document.getElementById(
+'fechar-australia-newsouthwales-Modal'
+);
+
+abrir_australia_newsouthwales.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_australia_newsouthwales.showModal();
+
+});
+
+fechar_australia_newsouthwales.addEventListener(
+'click',
+function(){
+
+modal_australia_newsouthwales.close();
+
+});
+
+
+
+
+
+const modal_australia_victoria =
+document.getElementById(
+'australia-victoria-Modal'
+);
+
+const abrir_australia_victoria =
+document.getElementById(
+'abrir-australia-victoria-Modal'
+);
+
+const fechar_australia_victoria =
+document.getElementById(
+'fechar-australia-victoria-Modal'
+);
+
+abrir_australia_victoria.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_australia_victoria.showModal();
+
+});
+
+fechar_australia_victoria.addEventListener(
+'click',
+function(){
+
+modal_australia_victoria.close();
+
+});
+
+modal_australia_western.addEventListener('click', function(event){
+    const rect = modal_australia_western.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_australia_western.close();
+    }
+});
+
+modal_australia_queensland.addEventListener('click', function(event){
+    const rect = modal_australia_queensland.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_australia_queensland.close();
+    }
+});
+
+modal_australia_newsouthwales.addEventListener('click', function(event){
+    const rect = modal_australia_newsouthwales.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_australia_newsouthwales.close();
+    }
+});
+
+modal_australia_victoria.addEventListener('click', function(event){
+    const rect = modal_australia_victoria.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_australia_victoria.close();
+    }
+});
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

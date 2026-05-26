@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Japão</title>
+
+<style>
+
+
+ body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+/* TÍTULO */
+h1{
+    margin:20px;
+    text-align:center;
+    color:#333;
+}
+
+/* IMAGEM DO MAPA */
+img{
+    display:block;
+    margin:20px auto;
+    max-width:80%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* LINKS */
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* DIALOG (MODAL) */
+dialog{
+    padding:20px;
+    border:none;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+.bt-fechar{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#ff5252;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bt-fechar:hover{
+    background:#d32f2f;
+}
+
+/* TABELA */
+.info-tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.info-tabela th{
+    background:#00bcd4;
+    color:white;
+    padding:8px;
+}
+
+.info-tabela td{
+    padding:8px;
+    border:1px solid #ccc;
+    background:#f9f9f9;
+}
+
+.info-tabela tr:hover td{
+    background:#eee;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu-lateral">
+
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+
+<a href="brasil.html">🇧🇷 Brasil</a>
+
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+
+<a href="japao.html">🇯🇵 Japão</a>
+
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+
+<a href="italia.html">🇮🇹 Itália</a>
+
+<a href="australia.html">🇦🇺 Austrália</a>
+
+</div>
+
+
+
+<h1>Mapa do Japão</h1>
+
+<img src="mapa-do-japao.svg"
+alt="mapa do Japão"
+usemap="#mapajapao">
+
+
+
+<map name="mapajapao">
+
+<area shape="poly"
+coords="362,165,346,164,356,154,344,150,341,144,340,137,350,128,360,138,371,134,387,130,409,148,425,156,432,157,435,138,447,123,454,116,475,115,496,108,508,102,497,97,488,79,495,55,473,69,456,66,444,64,389,6,380,10,376,12,382,32,381,58,372,79,369,104,343,100,338,100,341,114,332,122,323,131,320,143,330,155,333,164,329,178,339,172,342,160,362,163"
+href="#"
+alt="Hokkaidō"
+id="abrir-japao-hokkaido-Modal">
+
+
+<area shape="poly"
+coords="182,449,187,447,177,471,181,483,199,492,208,475,214,464,224,459,224,439,224,437,238,443,243,443,234,448,257,450,274,445,280,432,291,433,286,447,292,447,298,446,299,431,299,426,320,421,320,412,330,411,326,420,323,427,321,443,332,435,339,422,342,410,356,403,348,389,357,360,358,306,379,306,373,293,391,255,385,224,375,208,371,184,357,175,352,186,366,187,367,198,355,200,353,200,347,200,346,187,335,186,335,192,336,201,328,208,325,210,322,217,326,230,320,239,318,243,324,250,318,284,310,311,268,350,241,367,234,369,237,355,231,351,247,341,223,345,223,359,224,371,200,388,206,409,191,414,180,409,143,412,112,413,97,420,83,429,58,452,41,461,42,471,54,472,77,473,80,476,93,457,101,462,133,454,163,443,185,448,179,461,185,448"
+href="#"
+alt="Honshū"
+id="abrir-japao-honshu-Modal">
+
+
+<area shape="poly"
+coords="156,466,157,477,140,461,129,463,126,477,108,477,110,469,86,492,92,494,93,503,104,521,115,503,131,491,144,502,154,483,159,472,153,466,142,465"
+href="#"
+alt="Shikoku"
+id="abrir-japao-shikoku-Modal">
+
+
+<area shape="poly"
+coords="69,488,48,487,39,474,24,481,24,487,8,490,2,494,8,509,4,518,8,525,17,517,22,525,26,522,21,513,21,501,24,501,31,515,31,532,21,542,20,559,19,573,28,576,30,559,36,556,38,572,43,581,51,569,54,569,65,538,74,522,76,514,59,506,69,485"
+href="#"
+alt="Kyūshū"
+id="abrir-japao-kyushu-Modal">
+
+
+
+
+</map>
+
+
+
+
+
+<dialog id="japao-hokkaido-Modal">
+
+<h2>Hokkaidō</h2>
+
+<p><table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Frio temperado, com invernos rigorosos</td></tr>
+<tr><td>População</td><td>Aprox. 5,2 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 2.290 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas boreais e coníferas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-japao-hokkaido-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="japao-honshu-Modal">
+
+<h2>Honshū</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado, variando de norte a sul</td></tr>
+<tr><td>População</td><td>Aprox. 104 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 3.776 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas temperadas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-japao-honshu-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="japao-shikoku-Modal">
+
+<h2>Shikoku</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Subtropical úmido</td></tr>
+<tr><td>População</td><td>Aprox. 4 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.982 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas densas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-japao-shikoku-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="japao-kyushu-Modal">
+
+<h2>Kyūshū</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Subtropical</td></tr>
+<tr><td>População</td><td>Aprox. 13 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.592 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas tropicais e subtropicais</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-japao-kyushu-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+const modal_japao_hokkaido = document.getElementById('japao-hokkaido-Modal');
+const abrir_japao_hokkaido = document.getElementById('abrir-japao-hokkaido-Modal');
+const fechar_japao_hokkaido = document.getElementById('fechar-japao-hokkaido-Modal');
+
+abrir_japao_hokkaido.addEventListener('click', function(event){
+
+event.preventDefault();
+
+modal_japao_hokkaido.showModal();
+
+});
+
+fechar_japao_hokkaido.addEventListener('click', function(){
+
+modal_japao_hokkaido.close();
+
+});
+
+
+
+
+
+const modal_japao_honshu = document.getElementById('japao-honshu-Modal');
+const abrir_japao_honshu = document.getElementById('abrir-japao-honshu-Modal');
+const fechar_japao_honshu = document.getElementById('fechar-japao-honshu-Modal');
+
+abrir_japao_honshu.addEventListener('click', function(event){
+
+event.preventDefault();
+
+modal_japao_honshu.showModal();
+
+});
+
+fechar_japao_honshu.addEventListener('click', function(){
+
+modal_japao_honshu.close();
+
+});
+
+
+
+
+
+const modal_japao_shikoku = document.getElementById('japao-shikoku-Modal');
+const abrir_japao_shikoku = document.getElementById('abrir-japao-shikoku-Modal');
+const fechar_japao_shikoku = document.getElementById('fechar-japao-shikoku-Modal');
+
+abrir_japao_shikoku.addEventListener('click', function(event){
+
+event.preventDefault();
+
+modal_japao_shikoku.showModal();
+
+});
+
+fechar_japao_shikoku.addEventListener('click', function(){
+
+modal_japao_shikoku.close();
+
+});
+
+
+
+
+
+const modal_japao_kyushu = document.getElementById('japao-kyushu-Modal');
+const abrir_japao_kyushu = document.getElementById('abrir-japao-kyushu-Modal');
+const fechar_japao_kyushu = document.getElementById('fechar-japao-kyushu-Modal');
+
+abrir_japao_kyushu.addEventListener('click', function(event){
+
+event.preventDefault();
+
+modal_japao_kyushu.showModal();
+
+});
+
+fechar_japao_kyushu.addEventListener('click', function(){
+
+modal_japao_kyushu.close();
+
+});
+
+
+modal_japao_hokkaido.addEventListener('click', function(event){
+    const rect = modal_japao_hokkaido.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_japao_hokkaido.close();
+    }
+});
+
+modal_japao_honshu.addEventListener('click', function(event){
+    const rect = modal_japao_honshu.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_japao_honshu.close();
+    }
+});
+
+modal_japao_shikoku.addEventListener('click', function(event){
+    const rect = modal_japao_shikoku.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_japao_shikoku.close();
+    }
+});
+
+modal_japao_kyushu.addEventListener('click', function(event){
+    const rect = modal_japao_kyushu.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_japao_kyushu.close();
+    }
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

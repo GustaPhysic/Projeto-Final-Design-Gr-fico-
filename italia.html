@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Itália</title>
+<style>
+ body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+/* TÍTULO */
+h1{
+    margin:20px;
+    text-align:center;
+    color:#333;
+}
+
+/* IMAGEM DO MAPA */
+img{
+    display:block;
+    margin:20px auto;
+    max-width:80%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* LINKS */
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* DIALOG (MODAL) */
+dialog{
+    padding:20px;
+    border:none;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+.bt-fechar{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#ff5252;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bt-fechar:hover{
+    background:#d32f2f;
+}
+
+/* TABELA */
+.info-tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.info-tabela th{
+    background:#00bcd4;
+    color:white;
+    padding:8px;
+}
+
+.info-tabela td{
+    padding:8px;
+    border:1px solid #ccc;
+    background:#f9f9f9;
+}
+
+.info-tabela tr:hover td{
+    background:#eee;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="menu-lateral">
+
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+
+<a href="brasil.html">🇧🇷 Brasil</a>
+
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+
+<a href="japao.html">🇯🇵 Japão</a>
+
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+
+<a href="italia.html">🇮🇹 Itália</a>
+
+<a href="australia.html">🇦🇺 Austrália</a>
+
+</div>
+
+
+
+
+<h1>Mapa da Itália</h1>
+
+<img src="mapa-da-italia.svg"
+alt="mapa da Itália"
+usemap="#mapaitalia">
+
+
+
+
+<map name="mapaitalia">
+
+<area shape="poly"
+coords="192,179,187,186,185,194,185,206,196,228,200,245,180,243,179,246,186,265,191,277,200,273,209,275,215,287,221,296,226,303,229,300,233,289,229,278,229,270,239,264,249,264,260,264,276,262,286,270,293,273,311,280,321,282,322,278,337,277,352,277,363,278,363,276,354,260,336,262,336,254,330,247,323,239,319,232,319,226,325,211,329,202,330,198,321,196,312,196,305,178,311,156,312,147,315,135,297,126,288,125,277,125,283,133,283,140,291,153,285,159,271,153,272,145,266,144,248,150,236,135,236,133,224,135,228,147,224,158,217,169,213,174,210,183,217,189,212,194,208,195,202,191,193,183"
+href="#"
+alt="Lombardy"
+id="abrir-italia-lombardy-Modal">
+
+
+<area shape="poly"
+coords="414,123,428,122,439,119,456,121,456,128,444,135,442,141,432,151,431,162,439,169,432,184,444,194,452,201,462,199,479,204,462,219,444,225,434,227,426,227,424,240,422,251,423,259,430,271,435,281,439,288,425,294,419,288,419,281,411,274,395,275,380,279,365,280,359,271,354,258,336,246,327,233,327,213,329,210,342,209,355,207,356,197,370,184,382,176,390,177,396,167,407,157,401,151,394,138,400,132,413,124,417,117,434,119"
+href="#"
+alt="Veneto"
+id="abrir-italia-veneto-Modal">
+
+
+<area shape="poly"
+coords="456,876,469,881,481,875,488,870,505,875,513,882,527,888,541,885,568,885,596,874,620,873,635,863,642,863,642,875,625,888,623,907,620,920,610,935,610,947,615,953,621,960,625,972,620,975,613,984,613,998,601,1000,597,994,580,992,570,980,559,968,553,962,534,958,514,941,487,936,478,926,467,924,451,919,442,909,439,896,439,883,449,873,457,870,469,884,485,872,494,872"
+href="#"
+alt="Sicily"
+id="abrir-italia-sicily-Modal">
+
+
+<area shape="poly"
+coords="679,725,693,724,698,714,698,707,711,705,712,718,709,731,704,735,705,750,715,751,741,761,745,771,749,803,748,814,731,811,714,814,708,824,707,840,707,859,697,863,689,864,682,879,676,889,664,898,646,895,647,877,647,867,654,859,668,849,662,841,659,835,662,828,674,826,685,823,684,809,665,794,668,770,667,757,661,745,658,730,658,719,668,714,676,721,696,723,704,713,703,708,709,702,711,704"
+href="#"
+alt="Calabria"
+id="abrir-italia-calabria-Modal">
+
+</map>
+
+
+
+
+
+<dialog id="italia-lombardy-Modal">
+
+<h2>Lombardy</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado continental</td></tr>
+<tr><td>População</td><td>Aprox. 10 milhões</td></tr>
+<tr><td>Altitude</td><td>~50 m a 4.000 m</td></tr>
+<tr><td>Vegetação</td><td>Campos agrícolas e florestas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-italia-lombardy-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="italia-veneto-Modal">
+
+<h2>Veneto</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado úmido</td></tr>
+<tr><td>População</td><td>Aprox. 5 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 3.300 m</td></tr>
+<tr><td>Vegetação</td><td>Campos agrícolas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-italia-veneto-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="italia-sicily-Modal">
+
+<h2>Sicily</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Mediterrâneo</td></tr>
+<tr><td>População</td><td>Aprox. 5 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 3.357 m</td></tr>
+<tr><td>Vegetação</td><td>Vegetação mediterrânea</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-italia-sicily-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+<dialog id="italia-calabria-Modal">
+
+<h2>Calabria</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Mediterrâneo</td></tr>
+<tr><td>População</td><td>Aprox. 2 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 2.000 m</td></tr>
+<tr><td>Vegetação</td><td>Matas e vegetação mediterrânea</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-italia-calabria-Modal">
+
+Fechar
+
+</button>
+
+</dialog>
+
+
+
+
+
+<script>
+
+const modal_italia_lombardy =
+document.getElementById(
+'italia-lombardy-Modal'
+);
+
+const abrir_italia_lombardy =
+document.getElementById(
+'abrir-italia-lombardy-Modal'
+);
+
+const fechar_italia_lombardy =
+document.getElementById(
+'fechar-italia-lombardy-Modal'
+);
+
+abrir_italia_lombardy.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_italia_lombardy.showModal();
+
+});
+
+fechar_italia_lombardy.addEventListener(
+'click',
+function(){
+
+modal_italia_lombardy.close();
+
+});
+
+
+
+
+
+const modal_italia_veneto =
+document.getElementById(
+'italia-veneto-Modal'
+);
+
+const abrir_italia_veneto =
+document.getElementById(
+'abrir-italia-veneto-Modal'
+);
+
+const fechar_italia_veneto =
+document.getElementById(
+'fechar-italia-veneto-Modal'
+);
+
+abrir_italia_veneto.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_italia_veneto.showModal();
+
+});
+
+fechar_italia_veneto.addEventListener(
+'click',
+function(){
+
+modal_italia_veneto.close();
+
+});
+
+
+
+
+
+const modal_italia_sicily =
+document.getElementById(
+'italia-sicily-Modal'
+);
+
+const abrir_italia_sicily =
+document.getElementById(
+'abrir-italia-sicily-Modal'
+);
+
+const fechar_italia_sicily =
+document.getElementById(
+'fechar-italia-sicily-Modal'
+);
+
+abrir_italia_sicily.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_italia_sicily.showModal();
+
+});
+
+fechar_italia_sicily.addEventListener(
+'click',
+function(){
+
+modal_italia_sicily.close();
+
+});
+
+
+
+
+
+const modal_italia_calabria =
+document.getElementById(
+'italia-calabria-Modal'
+);
+
+const abrir_italia_calabria =
+document.getElementById(
+'abrir-italia-calabria-Modal'
+);
+
+const fechar_italia_calabria =
+document.getElementById(
+'fechar-italia-calabria-Modal'
+);
+
+abrir_italia_calabria.addEventListener(
+'click',
+function(event){
+
+event.preventDefault();
+
+modal_italia_calabria.showModal();
+
+});
+
+fechar_italia_calabria.addEventListener(
+'click',
+function(){
+
+modal_italia_calabria.close();
+
+});
+
+modal_italia_lombardy.addEventListener('click', function(event){
+    const rect = modal_italia_lombardy.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_italia_lombardy.close();
+    }
+});
+
+modal_italia_veneto.addEventListener('click', function(event){
+    const rect = modal_italia_veneto.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_italia_veneto.close();
+    }
+});
+
+modal_italia_sicily.addEventListener('click', function(event){
+    const rect = modal_italia_sicily.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_italia_sicily.close();
+    }
+});
+
+modal_italia_calabria.addEventListener('click', function(event){
+    const rect = modal_italia_calabria.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_italia_calabria.close();
+    }
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

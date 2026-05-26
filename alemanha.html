@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+ body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+/* TÍTULO */
+h1{
+    margin:20px;
+    text-align:center;
+    color:#333;
+}
+
+/* IMAGEM DO MAPA */
+img{
+    display:block;
+    margin:20px auto;
+    max-width:80%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* LINKS */
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* DIALOG (MODAL) */
+dialog{
+    padding:20px;
+    border:none;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+.bt-fechar{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#ff5252;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bt-fechar:hover{
+    background:#d32f2f;
+}
+
+/* TABELA */
+.info-tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.info-tabela th{
+    background:#00bcd4;
+    color:white;
+    padding:8px;
+}
+
+.info-tabela td{
+    padding:8px;
+    border:1px solid #ccc;
+    background:#f9f9f9;
+}
+
+.info-tabela tr:hover td{
+    background:#eee;
+}
+
+</style>
+</head>
+
+
+<body> 
+
+    <div class="menu-lateral">
+
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+
+<a href="brasil.html">🇧🇷 Brasil</a>
+
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+
+<a href="japao.html">🇯🇵 Japão</a>
+
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+
+<a href="italia.html">🇮🇹 Itália</a>
+
+<a href="australia.html">🇦🇺 Austrália</a>
+
+
+
+</div>
+
+
+
+
+
+    <h1>Mapa da Alemanha</h1>
+
+   <img src="mapa-da-alemanha.svg" alt="mapa da Alemanha" usemap="#mapaalemanha">
+   <map name="mapaalemanha">
+
+    <area shape="poly"
+    coords="134,455,129,427,96,411,100,392,114,386,134,391,135,370,151,342,155,280,134,277,141,254,148,241,148,230,166,216,175,219,217,217,244,216,254,235,249,257,240,259,252,267,268,261,263,248,261,235,282,246,282,241,282,225,288,208,301,193,318,197,337,198,352,194,376,225,386,247,410,262,430,278,440,271,458,274,470,274,491,282,512,293,522,285,543,306,555,314,566,330,585,332,580,347,569,354,543,355,525,357,505,365,505,378,511,390,522,406,524,427,532,448,531,457,535,473,526,490,520,499,500,500,488,501,483,510,490,522,489,533,484,542,497,556,497,568,489,578,469,572,462,572,458,587,445,596,434,597,424,603,410,602,401,611,400,622,390,618,383,606,390,598,391,582,395,576,390,567,379,564,360,563,376,526,359,524,355,503,343,484,327,471,324,455,340,439,332,420,326,431,301,437,298,417,282,419,262,427,271,442,274,462,279,474,263,484,250,478,242,486,219,492,217,488,228,476,220,469,220,451,223,448,217,438,194,425,186,421,187,433,182,439,163,448,155,452,132,456"
+    href="#"
+    alt="Niedersachsen"
+    id="abrir-alemanha-niedersachsen-Modal">
+
+
+    <area shape="poly"
+    coords="292,606,319,603,317,586,327,579,336,598,347,589,358,581,363,570,368,565,377,567,387,575,388,583,388,591,380,608,384,621,398,623,411,618,409,609,417,609,417,620,425,624,433,634,442,636,447,641,440,643,439,652,445,665,440,668,430,666,430,670,430,674,424,675,419,677,426,684,428,696,422,701,418,706,410,719,412,730,423,732,426,727,431,723,428,728,429,744,428,755,421,760,414,761,406,762,396,753,396,770,397,779,393,786,385,794,374,795,372,793,369,800,373,808,373,815,365,817,360,808,347,805,344,805,330,810,328,810,321,811,315,816,321,825,325,866,328,905,303,918,291,907,284,896,279,895,274,902,271,909,262,902,255,895,251,881,265,871,260,862,259,851,240,823,200,830,195,816,202,804,212,808,209,798,214,791,224,791,228,784,224,767,216,756,216,742,219,738,232,738,235,724,235,711,235,695,248,689,263,685,273,668,276,655,291,648,303,622,294,622,279,621,292,607"
+    href="#"
+    alt="Hessen"
+    id="abrir-alemanha-hessen-Modal">
+
+
+    <area shape="poly"
+    coords="469,570,484,580,489,574,498,576,496,567,504,562,519,566,526,570,518,578,527,585,527,598,534,602,547,602,561,604,572,606,572,635,583,643,579,647,585,653,594,649,606,654,613,661,624,658,635,665,653,675,662,676,666,663,666,655,671,651,681,659,692,661,698,670,704,683,690,684,678,689,666,694,657,706,669,719,657,730,651,731,648,740,639,744,637,727,623,738,630,750,626,767,637,777,623,767,612,765,592,767,580,762,577,748,568,744,565,755,557,756,559,766,560,787,547,789,548,782,545,772,534,777,522,772,511,774,498,774,502,779,516,787,512,796,504,792,492,802,488,792,488,774,475,770,462,765,459,754,443,741,434,741,430,733,433,726,432,720,421,722,419,731,415,725,421,709,430,697,429,683,424,680,431,676,436,664,449,670,450,663,442,654,446,643,450,633,433,628,429,622,413,610,424,602,451,590,457,590,465,575,471,570"
+    href="#"
+    alt="Thüringen"
+    id="abrir-alemanha-thuringen-Modal">
+
+
+    <area shape="poly"
+    coords="578,319,589,300,610,299,628,287,639,280,667,290,673,300,690,294,710,304,731,310,743,297,763,292,796,251,812,259,840,264,849,264,836,285,846,291,861,273,867,288,864,316,841,333,841,351,861,371,888,394,891,415,886,426,895,448,903,456,910,476,906,509,899,521,908,539,913,559,906,569,894,565,885,566,863,574,851,571,837,578,840,596,830,600,778,594,769,593,760,599,757,591,755,570,738,559,750,547,749,523,701,501,690,505,680,500,669,497,651,474,656,463,659,443,661,422,643,411,644,394,651,380,653,369,650,355,631,357,616,355,602,342,582,335,570,329,582,313"
+    href="#"
+    alt="Brandenburg"
+    id="abrir-alemanha-brandenburg-Modal">
+
+</map>
+<dialog id="alemanha-niedersachsen-Modal">
+
+<h2>Niedersachsen</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado oceânico</td></tr>
+<tr><td>População</td><td>Aprox. 8 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 971 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas temperadas e áreas agrícolas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-alemanha-niedersachsen-Modal">
+Fechar
+</button>
+
+</dialog>
+
+
+
+<dialog id="alemanha-hessen-Modal">
+
+<h2>Hessen</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado continental</td></tr>
+<tr><td>População</td><td>Aprox. 6,3 milhões</td></tr>
+<tr><td>Altitude</td><td>~80 m a 950 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas e áreas urbanas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-alemanha-hessen-Modal">
+Fechar
+</button>
+
+</dialog>
+
+
+<dialog id="alemanha-thuringen-Modal">
+
+<h2>Thüringen</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado continental</td></tr>
+<tr><td>População</td><td>Aprox. 2,1 milhões</td></tr>
+<tr><td>Altitude</td><td>~100 m a 982 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas densas (Floresta da Turíngia)</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-alemanha-thuringen-Modal">
+Fechar
+</button>
+
+</dialog>
+
+
+
+<dialog id="alemanha-brandenburg-Modal">
+
+<h2>Brandenburg</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Temperado continental</td></tr>
+<tr><td>População</td><td>Aprox. 2,6 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 201 m</td></tr>
+<tr><td>Vegetação</td><td>Florestas, lagos e áreas agrícolas</td></tr>
+</table>
+
+<button class="bt-fechar"
+id="fechar-alemanha-brandenburg-Modal">
+Fechar
+</button>
+
+</dialog>
+
+
+
+
+   
+<script>
+    const modal_alemanha_niedersachsen = document.getElementById('alemanha-niedersachsen-Modal');
+const abrir_alemanha_niedersachsen = document.getElementById('abrir-alemanha-niedersachsen-Modal');
+const fechar_alemanha_niedersachsen = document.getElementById('fechar-alemanha-niedersachsen-Modal');
+
+abrir_alemanha_niedersachsen.addEventListener('click', function(event){
+
+    event.preventDefault();
+
+    modal_alemanha_niedersachsen.showModal();
+
+});
+
+fechar_alemanha_niedersachsen.addEventListener('click', function(){
+
+    modal_alemanha_niedersachsen.close();
+
+});
+
+
+
+
+
+const modal_alemanha_hessen = document.getElementById('alemanha-hessen-Modal');
+const abrir_alemanha_hessen = document.getElementById('abrir-alemanha-hessen-Modal');
+const fechar_alemanha_hessen = document.getElementById('fechar-alemanha-hessen-Modal');
+
+abrir_alemanha_hessen.addEventListener('click', function(event){
+
+    event.preventDefault();
+
+    modal_alemanha_hessen.showModal();
+
+});
+
+fechar_alemanha_hessen.addEventListener('click', function(){
+
+    modal_alemanha_hessen.close();
+
+});
+
+
+
+
+
+const modal_alemanha_thuringen = document.getElementById('alemanha-thuringen-Modal');
+const abrir_alemanha_thuringen = document.getElementById('abrir-alemanha-thuringen-Modal');
+const fechar_alemanha_thuringen = document.getElementById('fechar-alemanha-thuringen-Modal');
+
+abrir_alemanha_thuringen.addEventListener('click', function(event){
+
+    event.preventDefault();
+
+    modal_alemanha_thuringen.showModal();
+
+});
+
+fechar_alemanha_thuringen.addEventListener('click', function(){
+
+    modal_alemanha_thuringen.close();
+
+});
+
+
+
+
+
+const modal_alemanha_brandenburg = document.getElementById('alemanha-brandenburg-Modal');
+const abrir_alemanha_brandenburg = document.getElementById('abrir-alemanha-brandenburg-Modal');
+const fechar_alemanha_brandenburg = document.getElementById('fechar-alemanha-brandenburg-Modal');
+
+abrir_alemanha_brandenburg.addEventListener('click', function(event){
+
+    event.preventDefault();
+
+    modal_alemanha_brandenburg.showModal();
+
+});
+
+fechar_alemanha_brandenburg.addEventListener('click', function(){
+
+    modal_alemanha_brandenburg.close();
+
+});
+
+
+modal_alemanha_niedersachsen.addEventListener('click', function(event){
+    const rect = modal_alemanha_niedersachsen.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_alemanha_niedersachsen.close();
+    }
+});
+
+modal_alemanha_hessen.addEventListener('click', function(event){
+    const rect = modal_alemanha_hessen.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_alemanha_hessen.close();
+    }
+});
+
+modal_alemanha_thuringen.addEventListener('click', function(event){
+    const rect = modal_alemanha_thuringen.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_alemanha_thuringen.close();
+    }
+});
+
+modal_alemanha_brandenburg.addEventListener('click', function(event){
+    const rect = modal_alemanha_brandenburg.getBoundingClientRect();
+    if(
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+    ){
+        modal_alemanha_brandenburg.close();
+    }
+});
+
+
+
+</script>
+    
+</body>
+</html>

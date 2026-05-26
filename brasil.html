@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+ body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+/* TÍTULO */
+h1{
+    margin:20px;
+    text-align:center;
+    color:#333;
+}
+
+/* IMAGEM DO MAPA */
+img{
+    display:block;
+    margin:20px auto;
+    max-width:80%;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* MENU LATERAL */
+.menu-lateral{
+    position:fixed;
+    top:0;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:linear-gradient(180deg, #1d1d1d, #2c2c2c);
+    padding:20px;
+    box-sizing:border-box;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-lateral h3{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* LINKS */
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:#333;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu-lateral a:hover{
+    background:#00bcd4;
+    transform:scale(1.05);
+}
+
+/* DIALOG (MODAL) */
+dialog{
+    padding:20px;
+    border:none;
+    border-radius:12px;
+    width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO */
+.bt-fechar{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:#ff5252;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bt-fechar:hover{
+    background:#d32f2f;
+}
+
+/* TABELA */
+.info-tabela{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.info-tabela th{
+    background:#00bcd4;
+    color:white;
+    padding:8px;
+}
+
+.info-tabela td{
+    padding:8px;
+    border:1px solid #ccc;
+    background:#f9f9f9;
+}
+
+.info-tabela tr:hover td{
+    background:#eee;
+}
+
+</style>
+
+</head>
+
+
+<body> 
+
+  <div class="menu-lateral">
+
+<h3>Países</h3>
+
+<a href="home.html">🏠 Início</a>
+
+<a href="brasil.html">🇧🇷 Brasil</a>
+
+<a href="alemanha.html">🇩🇪 Alemanha</a>
+
+<a href="japao.html">🇯🇵 Japão</a>
+
+<a href="finlandia.html">🇫🇮 Finlândia</a>
+
+<a href="italia.html">🇮🇹 Itália</a>
+
+<a href="australia.html">🇦🇺 Austrália</a>
+
+</div>
+
+
+
+
+
+    <h1>Mapa do Brasil</h1>
+
+    <img src="mapa-do-brasil.svg" alt="mapa do Brasil" usemap="#mapabrasil">
+    <map name="mapabrasil">
+        <area shape="poly" coords="302,482,317,482,340,501,351,502,346,512,352,515,330,545,313,554,309,575,300,575,296,569,304,560,292,550,274,534,267,539,257,523,247,524,273,495,293,479,302,481"
+          href="#" 
+          alt="Rio Grande do Sul"
+          id="abrir-brasil-rs-Modal">
+
+
+          <area shape="poly" coords="483,127,496,125,516,133,530,148,543,156,523,176,522,191,519,200,501,190,492,193,493,182,488,160,484,147,482,124,486,124"
+          href="#" 
+          alt="Ceará"
+          id="abrir-brasil-ce-Modal">
+
+        <area shape="poly" coords="244,343,251,339,242,354,238,370,241,383,240,403,246,409,254,407,259,404,267,409,274,424,277,437,283,431,292,434,301,417,317,403,325,385,339,373,337,363,313,356,307,343,295,342,300,334,298,332,290,336,283,336,278,337,265,332,255,334,255,335,245,343"
+          href="#" 
+          alt="Mato Grosso do Sul"
+          id="abrir-brasil-ms-Modal">
+
+
+        <area shape="poly" coords="343,280,348,264,357,273,369,269,377,276,393,277,402,274,406,282,408,302,397,299,394,311,391,324,387,333,387,344,381,352,362,353,343,357,335,371,331,360,318,355,306,342,309,328,319,317,334,300,344,280,348,268"
+          href="#" 
+          alt="Goiás"
+          id="abrir-brasil-go-Modal">
+
+        <area shape="poly" coords="17,222,1,198,11,195,21,197,42,200,52,203,60,207,73,215,87,221,98,224,106,228,96,239,89,241,82,245,66,244,56,248,52,226,47,226,40,235,31,233,24,223,13,224,15,217,2,197"
+          href="#" 
+          alt="Acre"
+          id="abrir-brasil-ac-Modal">
+
+
+
+
+
+</map>
+
+<dialog id="brasil-rs-Modal">
+<h2>Estado do Rio Grande do Sul</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Subtropical</td></tr>
+<tr><td>População</td><td>Aprox. 11 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.398 m</td></tr>
+<tr><td>Vegetação</td><td>Pampas e florestas subtropicais</td></tr>
+</table>
+
+<button class="bt-fechar" id="fechar-brasil-rs-Modal">Fechar</button>
+</dialog>
+
+
+<dialog id="brasil-ce-Modal">
+<h2>Estado do Ceará</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Semiárido e tropical</td></tr>
+<tr><td>População</td><td>Aprox. 9 milhões</td></tr>
+<tr><td>Altitude</td><td>~0 m a 1.154 m</td></tr>
+<tr><td>Vegetação</td><td>Caatinga</td></tr>
+</table>
+
+<button class="bt-fechar" id="fechar-brasil-ce-Modal">Fechar</button>
+</dialog>
+
+<dialog id="brasil-ms-Modal">
+<h2>Estado do Mato Grosso do Sul</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Tropical</td></tr>
+<tr><td>População</td><td>Aprox. 2,8 milhões</td></tr>
+<tr><td>Altitude</td><td>~100 m a 1.065 m</td></tr>
+<tr><td>Vegetação</td><td>Cerrado e Pantanal</td></tr>
+</table>
+
+<button class="bt-fechar" id="fechar-brasil-ms-Modal">Fechar</button>
+</dialog>
+
+
+<dialog id="brasil-go-Modal">
+<h2>Estado de Goiás</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Tropical</td></tr>
+<tr><td>População</td><td>Aprox. 7 milhões</td></tr>
+<tr><td>Altitude</td><td>~300 m a 1.676 m</td></tr>
+<tr><td>Vegetação</td><td>Cerrado</td></tr>
+</table>
+
+<button class="bt-fechar" id="fechar-brasil-go-Modal">Fechar</button>
+</dialog>
+
+
+<dialog id="brasil-ac-Modal">
+<h2>Estado do Acre</h2>
+
+<table class="info-tabela">
+<tr><th>Característica</th><th>Dados</th></tr>
+<tr><td>Clima</td><td>Equatorial</td></tr>
+<tr><td>População</td><td>Aprox. 900 mil</td></tr>
+<tr><td>Altitude</td><td>~100 m a 609 m</td></tr>
+<tr><td>Vegetação</td><td>Floresta Amazônica</td></tr>
+</table>
+
+<button class="bt-fechar" id="fechar-brasil-ac-Modal">Fechar</button>
+</dialog>
+
+
+
+
+
+   
+<script>
+    const modal_brasil_rs = document.getElementById('brasil-rs-Modal');
+    const abrir_brasil_rs = document.getElementById('abrir-brasil-rs-Modal');
+    const fechar_brasil_rs = document.getElementById('fechar-brasil-rs-Modal');
+
+    abrir_brasil_rs.addEventListener('click', function(event){
+        event.preventDefault();
+       modal_brasi_rs.showModal();
+
+    });
+    fechar_brasil_rs.addEventListener('click', function(){
+       modal_brasil_rs.close();
+    })
+
+
+
+    const modal_brasil_ce = document.getElementById('brasil-ce-Modal');
+    const abrir_brasil_ce = document.getElementById('abrir-brasil-ce-Modal');
+    const fechar_brasil_ce = document.getElementById('fechar-brasil-ce-Modal');
+
+    abrir_brasil_ce.addEventListener('click', function(event){
+        event.preventDefault();
+       modal_brasil_ce.showModal();
+
+    });
+    fechar_brasil_ce.addEventListener('click', function(){
+       modal_brasil_ce.close();
+    })
+
+
+    const modal_brasil_ms = document.getElementById('brasil-ms-Modal');
+    const abrir_brasil_ms = document.getElementById('abrir-brasil-ms-Modal');
+    const fechar_brasil_ms = document.getElementById('fechar-brasil-ms-Modal');
+
+    abrir_brasil_ms.addEventListener('click', function(event){
+        event.preventDefault();
+       modal_brasil_ms.showModal();
+
+    });
+    fechar_brasil_ms.addEventListener('click', function(){
+       modal_brasil_ms.close();
+    })
+
+    const modal_brasil_go = document.getElementById('brasil-go-Modal');
+    const abrir_brasil_go = document.getElementById('abrir-brasil-go-Modal');
+    const fechar_brasil_go = document.getElementById('fechar-brasil-go-Modal');
+
+    abrir_brasil_go.addEventListener('click', function(event){
+        event.preventDefault();
+       modal_brasil_go.showModal();
+
+    });
+    fechar_brasil_go.addEventListener('click', function(){
+       modal_brasil_go.close();
+    })
+
+
+
+    const modal_brasil_ac = document.getElementById('brasil-ac-Modal');
+    const abrir_brasil_ac = document.getElementById('abrir-brasil-ac-Modal');
+    const fechar_brasil_ac = document.getElementById('fechar-brasil-ac-Modal');
+
+    abrir_brasil_ac.addEventListener('click', function(event){
+        event.preventDefault();
+       modal_brasil_ac.showModal();
+
+    });
+    fechar_brasil_ac.addEventListener('click', function(){
+       modal_brasil_ac.close();
+    })
+
+
+    modal_brasil_rs.addEventListener('click', function(event){
+        const rect = modal_brasil_rs.getBoundingClientRect();
+        if(
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ){
+            modal_brasi_rs.close();
+        }
+    });
+
+      modal_brasil_ce.addEventListener('click', function(event){
+        const rect = modal_brasil_ce.getBoundingClientRect();
+        if(
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ){
+            modal_brasil_ce.close();
+        }
+    });
+
+
+    modal_brasil_ac.addEventListener('click', function(event){
+        const rect = modal_brasil_ac.getBoundingClientRect();
+        if(
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ){
+            modal_brasil_ac.close();
+        }
+    });
+
+
+      modal_brasil_go.addEventListener('click', function(event){
+        const rect = modal_brasil_go.getBoundingClientRect();
+        if(
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ){
+            modal_brasil_go.close();
+        }
+    });
+
+
+      modal_brasil_ms.addEventListener('click', function(event){
+        const rect = modal_brasil_ms.getBoundingClientRect();
+        if(
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ){
+            modal_brasil_ms.close();
+        }
+    });
+
+
+
+
+      
+
+
+
+
+
+
+    
+    
+</script>
+    
+</body>
+</html>
